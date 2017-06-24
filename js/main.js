@@ -22,6 +22,9 @@ wszystkieZgody.onchange = stanCheckboxa;
 
 function walidujFormularz (event) {
    
+    var bladWalidacjiMsg = document.createElement('p');
+    bladWalidacjiMsg.innerHTML = "Bład";
+    inputImie.parentNode.insertBefore(bladWalidacjiMsg, inputImie.nextSibling);
     
     if(inputImie.value.trim() == ""){
          event.preventDefault();

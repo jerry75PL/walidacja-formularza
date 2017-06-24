@@ -21,12 +21,24 @@ var inputEmail = document.getElementById("email");
 wszystkieZgody.onchange = stanCheckboxa;
 
 function walidujFormularz (event) {
-    event.preventDefault();
+   
     
-    if(inputImie.value == ""){
-       console.log("pole jest puste");
+    if(inputImie.value.trim() == ""){
+         event.preventDefault();
+        console.log("pole imie puste");
+        
+              }
+    
+    if(inputEmail.value.trim() == ""){
+         event.preventDefault();
+        console.log("pole Email jest puste");
+      
        }
-    
+    if(! zgodaMarketingowa1.checked) {
+         event.preventDefault();
+        console.log("zgoda nie jest zaznaczona");
+       
+       }
     
 }
 
